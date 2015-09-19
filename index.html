@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="calApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="cal.js"></script>
+    
+  </head>
+  <body>
+    
+    <div ng-controller="calController as cal">
+    
+      <button ng-click="cal.click(10)">10</button>
+      <button ng-click="cal.click(30)">30</button>
+      <button ng-click="cal.click(35)">35</button>
+      <button ng-click="cal.clear()">C</button>
+      
+      <h1>{{cal.total}}</h1>
+      <hr>
+      <div ng-repeat="show in cal.show">
+        {{show.text}}
+      </div>
+
+    </div>
+  </body>
+</html>
